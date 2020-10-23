@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<input type="number" id="n1" style="width:100px;">
+<input type="number" id="n2" style="width:100px;"><br/>
+<button id="submit" onclick="output('add')">Add</button>
+<button id="submit" onclick="output('dif')">Substract</button>
+<button id="submit" onclick="output('mult')">Multiplication</button>
+<br/>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;background:#ffffff;">
+YourbrowserdoesnotsupporttheHTML5canvastag.
+</canvas>
+<video playsinline autoplay muted></video>
+<script src="index.js"></script>
+<script>
+var canvas = document.querySelector('canvas');
+var video = document.querySelector('video');
+
+// Optional frames per second argument.
+var stream = canvas.captureStream(25);
+// Set the source of the <video> element to be the stream from the <canvas>.
+video.srcObject = stream;
+</script>
+</body>
+</html>
